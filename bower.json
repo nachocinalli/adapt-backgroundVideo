@@ -1,0 +1,17 @@
+{
+	"name": "adapt-backgroundVideo",
+	"version": "1.0.0",
+	"framework": "^2.0.0",
+	"description": "An extension to add videos to the JSON block theme",
+	"main": "/js/adapt-backgroundVideo.js",
+	"displayName" : "BackgroundVideo",
+ 	"extension" : "backgroundVideo",
+	"keywords": [
+		"adapt-plugin",
+		"adapt-extension"
+	],
+	"authors": ["Nacho Cinalli <nachocinalli@gmail.com>"],
+	"license": "GPL-3.0",
+	"homepage": "",
+	"targetAttribute": "_theme"
+}

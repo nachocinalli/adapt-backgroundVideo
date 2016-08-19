@@ -1,0 +1,9 @@
+<div class="backgroundVideo-inner">
+	<video preload="auto" loop autoplay muted poster="{{_theme._backgroundVideo._poster}}">
+	    <source src="{{_theme._backgroundVideo._mp4}}" type="video/mp4">
+	    <source src="{{_theme._backgroundVideo._webm}}" type="video/webm">	    
+	</video>
+	{{#if _theme._backgroundVideo._overlay}}
+		<div class="video-overlay"></div>
+	{{/if}}
+</div>

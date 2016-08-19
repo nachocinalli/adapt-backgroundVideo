@@ -1,0 +1,88 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required":false,
+  "globals": {
+  },
+  "properties":{
+    "pluginLocations": {
+      "type":"object",
+      "required":true,
+      "properties":{
+        "config": {
+          "type":"object"
+        },
+        "course": {
+          "type":"object"
+        },
+        "contentobject": {
+          "type":"object"
+        },
+        "article": {
+          "type":"object"
+        },
+        "block": {
+          "type":"object",
+          "properties":{
+            "_theme": {
+              "type": "object",
+              "required": false,
+              "legend": "Theme BackgroundVideo",
+              "properties": {
+                "_backgroundVideo": {
+                  "type": "object",
+                   "required": false,
+                   "title": "BackgroundVideo",
+                    "properties": {
+                      "_mp4": {
+                        "type":"string",
+                        "required":true,
+                        "default": "",
+                        "title": "MP4 Link",
+                        "inputType": "Asset:video",
+                        "validators": [],
+                        "help": "Link to an MP4 video",
+                        "translatable": false
+                      },
+                      "_webm": {
+                         "type":"string",
+                        "required":false,
+                        "default": "",
+                        "title": "WEBM Link",
+                        "inputType": "Asset:video",
+                        "validators": [],
+                        "help": "Link to an WEBM video",
+                        "translatable": false
+                      },
+                      "_poster": {
+                       "type":"string",
+                        "required":false,
+                        "default": "",
+                        "title": "Poster Link",
+                        "inputType": "Asset:image",
+                        "validators": [],
+                        "help": "Image displayed before the video is played",
+                        "translatable": false
+                      },
+                      "_overlay": {
+                        "type":"boolean",
+                        "required":true,
+                        "title": "Video Overlay",
+                        "inputType": { "type": "Boolean", "options": [false, true]},
+                        "validators": []
+                      }
+                      
+                    }
+                }
+              }
+            }
+          }
+        },
+        "component": {
+          "type":"object"
+        }
+      }
+    }
+  }
+}
