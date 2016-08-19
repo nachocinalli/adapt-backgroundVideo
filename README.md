@@ -30,7 +30,7 @@ The following attributes, set within *blocks.json*, configure the defaults for *
 ----------------------------
 **Version number:**  1.0.0  
 **Framework versions:**  2.0     
-**Author / maintainer:** Nacho Cinalli [](https://github.com/nachocinalli/adapt-backgorundVideo)    
+**Author / maintainer:**  [Nacho Cinalli](https://github.com/nachocinalli/adapt-backgorundVideo)    
 **Accessibility support:**    
 **RTL support:**  
 **Cross-platform coverage:** Chrome, Firefox (ESR + latest version), Edge 12, IE 11, IE10, IE9, Safari 8 
