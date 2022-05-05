@@ -1,88 +1,235 @@
 {
-  "type":"object",
-  "$schema": "http://json-schema.org/draft-04/schema",
-  "id": "http://jsonschema.net",
-  "required":false,
-  "globals": {
-  },
-  "properties":{
-    "pluginLocations": {
-      "type":"object",
-      "required":true,
-      "properties":{
-        "config": {
-          "type":"object"
-        },
-        "course": {
-          "type":"object"
-        },
-        "contentobject": {
-          "type":"object"
-        },
-        "article": {
-          "type":"object"
-        },
-        "block": {
-          "type":"object",
-          "properties":{
-            "_theme": {
-              "type": "object",
-              "required": false,
-              "legend": "Theme BackgroundVideo",
-              "properties": {
-                "_backgroundVideo": {
-                  "type": "object",
-                   "required": false,
-                   "title": "BackgroundVideo",
-                    "properties": {
-                      "_mp4": {
-                        "type":"string",
-                        "required":true,
-                        "default": "",
-                        "title": "MP4 Link",
-                        "inputType": "Asset:video",
-                        "validators": [],
-                        "help": "Link to an MP4 video",
-                        "translatable": false
-                      },
-                      "_webm": {
-                         "type":"string",
-                        "required":false,
-                        "default": "",
-                        "title": "WEBM Link",
-                        "inputType": "Asset:video",
-                        "validators": [],
-                        "help": "Link to an WEBM video",
-                        "translatable": false
-                      },
-                      "_poster": {
-                       "type":"string",
-                        "required":false,
-                        "default": "",
-                        "title": "Poster Link",
-                        "inputType": "Asset:image",
-                        "validators": [],
-                        "help": "Image displayed before the video is played",
-                        "translatable": false
-                      },
-                      "_overlay": {
-                        "type":"boolean",
-                        "required":true,
-                        "title": "Video Overlay",
-                        "inputType": { "type": "Boolean", "options": [false, true]},
-                        "validators": []
-                      }
-                      
-                    }
-                }
-              }
-            }
-          }
-        },
-        "component": {
-          "type":"object"
-        }
-      }
-    }
-  }
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "http://jsonschema.net",
+	"required": false,
+	"globals": {},
+	"properties": {
+		"pluginLocations": {
+			"type": "object",
+			"required": true,
+			"properties": {
+				"config": {
+					"type": "object"
+				},
+				"course": {
+
+					"type": "object",
+					"properties": {
+						"_backgroundVideo": {
+							"type": "object",
+							"required": false,
+							"legend": "Background Video",
+							"properties": {
+								"_isEnabled": {
+									"type": "boolean",
+									"required": true,
+									"default": false,
+									"title": "Is enabled",
+									"inputType": "Checkbox",
+									"validators": [],
+									"help": "Enable or disable the Background Video"
+								},
+								"_mp4": {
+									"type": "string",
+									"required": true,
+									"default": "",
+									"title": "MP4 Link",
+									"inputType": "Asset:video",
+									"validators": [],
+									"help": "Link to an MP4 video",
+									"translatable": false
+								},
+								"_webm": {
+									"type": "string",
+									"required": false,
+									"default": "",
+									"title": "WEBM Link",
+									"inputType": "Asset:video",
+									"validators": [],
+									"help": "Link to an WEBM video",
+									"translatable": false
+								},
+								"_graphic": {
+									"type": "string",
+									"required": false,
+									"default": "",
+									"title": "Graphic",
+									"inputType": "Asset:image",
+									"validators": [],
+									"help": "Image displayed before the video is played",
+									"translatable": false
+								},
+								"_selector": {
+									"type": "string",
+									"required": false,
+									"default": "",
+									"title": "Selector",
+									"inputType": "Text",
+									"validators": [],
+									"help": "The selector for the Background Video"
+								},
+								"_minHeight": {
+									"type": "number",
+									"required": false,
+									"default": "",
+									"title": "Min Height",
+									"inputType": "Number",
+									"validators": ["number"],
+									"help": ""
+								}
+							}
+						}
+
+					}
+				},
+				"contentobject": {
+					"type": "object",
+					"properties": {
+						"_backgroundVideo": {
+							"type": "object",
+							"required": false,
+							"legend": "Background Video",
+							"properties": {
+								"_isEnabled": {
+									"type": "boolean",
+									"required": true,
+									"default": false,
+									"title": "Is enabled",
+									"inputType": "Checkbox",
+									"validators": [],
+									"help": "Enable or disable the Background Video"
+								},
+								"_mp4": {
+									"type": "string",
+									"required": true,
+									"default": "",
+									"title": "MP4 Link",
+									"inputType": "Asset:video",
+									"validators": [],
+									"help": "Link to an MP4 video",
+									"translatable": false
+								},
+								"_webm": {
+									"type": "string",
+									"required": false,
+									"default": "",
+									"title": "WEBM Link",
+									"inputType": "Asset:video",
+									"validators": [],
+									"help": "Link to an WEBM video",
+									"translatable": false
+								},
+								"_graphic": {
+									"type": "string",
+									"required": false,
+									"default": "",
+									"title": "Graphic",
+									"inputType": "Asset:image",
+									"validators": [],
+									"help": "Image displayed before the video is played",
+									"translatable": false
+								},
+								"_selector": {
+									"type": "string",
+									"required": false,
+									"default": "",
+									"title": "Selector",
+									"inputType": "Text",
+									"validators": [],
+									"help": "The selector for the Background Video"
+								},
+								"_minHeight": {
+									"type": "number",
+									"required": false,
+									"default": "",
+									"title": "Min Height",
+									"inputType": "Number",
+									"validators": ["number"],
+									"help": ""
+								}
+							}
+						}
+
+					}
+				},
+				"article": {
+					"type": "object"
+				},
+				"block": {
+					"type": "object",
+					"properties": {
+						"_backgroundVideo": {
+							"type": "object",
+							"required": false,
+							"legend": "Background Video",
+							"properties": {
+								"_isEnabled": {
+									"type": "boolean",
+									"required": true,
+									"default": false,
+									"title": "Is enabled",
+									"inputType": "Checkbox",
+									"validators": [],
+									"help": "Enable or disable the Background Video"
+								},
+								"_mp4": {
+									"type": "string",
+									"required": true,
+									"default": "",
+									"title": "MP4 Link",
+									"inputType": "Asset:video",
+									"validators": [],
+									"help": "Link to an MP4 video",
+									"translatable": false
+								},
+								"_webm": {
+									"type": "string",
+									"required": false,
+									"default": "",
+									"title": "WEBM Link",
+									"inputType": "Asset:video",
+									"validators": [],
+									"help": "Link to an WEBM video",
+									"translatable": false
+								},
+								"_graphic": {
+									"type": "string",
+									"required": false,
+									"default": "",
+									"title": "Graphic",
+									"inputType": "Asset:image",
+									"validators": [],
+									"help": "Image displayed before the video is played",
+									"translatable": false
+								},
+								"_selector": {
+									"type": "string",
+									"required": false,
+									"default": "",
+									"title": "Selector",
+									"inputType": "Text",
+									"validators": [],
+									"help": "The selector for the Background Video"
+								},
+								"_minHeight": {
+									"type": "number",
+									"required": false,
+									"default": "",
+									"title": "Min Height",
+									"inputType": "Number",
+									"validators": ["number"],
+									"help": ""
+								}
+							}
+						}
+
+					}
+				},
+				"component": {
+					"type": "object"
+				}
+			}
+		}
+	}
 }

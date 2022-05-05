@@ -1,15 +1,19 @@
 {
   "name": "adapt-backgroundVideo",
-  "version": "1.1.0",
-  "framework": ">=2.0.0",
-  "description": "An extension to add videos to the JSON block theme",
+  "version": "2.0.0",
+  "framework": ">=5.14.0",
+  "description": "An extension to add videos to the background of an element (menu, page, block)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nachocinalli/adapt-backgroundVideo.git"
+  },
   "main": "/js/adapt-backgroundVideo.js",
-  "displayName": "BackgroundVideo",
+  "displayName": "Background Video",
   "extension": "backgroundVideo",
   "keywords": ["adapt-plugin", "adapt-extension"],
   "authors": ["Nacho Cinalli <nachocinalli@gmail.com>"],
   "license": "GPL-3.0",
   "homepage": "https://github.com/nachocinalli/adapt-backgroundVideo",
-  "issues": "https://github.com/nachocinalli/adapt-backgroundVideo/issues/new?title=adapt-backgroundVideo%3A%20please%20enter%20a%20brief%20summary%20of%20the%20issue%20here&body=please%20provide%20a%20full%20description%20of%20the%20problem,%20including%20steps%20on%20how%20to%20replicate,%20what%20browser(s)/device(s)%20the%20problem%20occurs%20on%20and,%20where%20helpful,%20screenshots.",
-  "targetAttribute": "_theme"
+  "issues": "https://github.com/nachocinalli/adapt-backgroundVideo/issues/",
+  "targetAttribute": "_backgroundVideo"
 }
